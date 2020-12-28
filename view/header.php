@@ -68,7 +68,7 @@
 				<div class="col-sm-7 col-md-6 col-lg-6"><a href="../view/panier.php" class="btn btn-success" style="height:30px; font-weight:bold" ><span class="glyphicon  glyphicon-shopping-cart"></span> Panier</a>:<span id="compt"><span class="compt"><?=$panier->compt()?></span></span>
 				</div>
 				<div class="col-sm-5 col-md-6 col-lg-6">
-					<span>Total: </span><span id="total"><?=$panier->total()?></span><span style="color:white"> fcfa </span></br>
+					<span>Total: </span><span id="total" style="color:red;font-weight:bold"><?=$panier->total()?></span><span style="color:white"> fcfa </span></br>
 <?php  				
 		//pour afficher Voir votre commande ou Commandez
 					$idCli="";
