@@ -31,7 +31,7 @@
 						</div>
 						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." "; ?> à <?=$donnee['prix']?> fcfa	<br/>
 						<?php if($donnee['stock']=='En Stock'){ ?>
-								<a href="../controller/requetePanier.php?id=<?=$donnee['id_pro']?>" class="btn btn-primary ajoutPanier"><span class="glyphicon glyphicon-plus" style="color:yellow"></span><span  class="ajoutAuPanier">Ajouter au panier</span></a>
+								<a href="../controller/requetePanier.php?id=<?=$donnee['id_pro']?>" class="btn btn-success ajoutPanier"><span class="glyphicon glyphicon-plus" style="color:yellow"></span><span  class="ajoutAuPanier">Ajouter au panier</span></a>
 						<?php  	}else if($donnee['stock']=='Stock epuisé'){ ?>
 								<a href="#" class="btn btn-primary ajoutPanierNon" style="background-color:rgb(200,0,0,0.7);">Stock épuisé</a>
 						<?php   } ?>
