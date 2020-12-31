@@ -161,11 +161,14 @@
 					  <a href="../index/index.php?menu4=poussinsChairs" class="dropdown-toggle"role="button">Oeufs
 					  </a>
 					</li>
+					<li class="dropdown">
+					  <a href="../index/index.php?menu6=fruits" class="dropdown-toggle"role="button">Fruit et boisson</a>
+					</li>
 					<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vivriers<span class="caret"></span></a>
 					  <ul class="dropdown-menu">
-						<li><a href="../index/index.php?menu5=condiments" style=" font-weight:bold">Condiment</a></li>
-						<li><a href="../index/index.php?menu6=fruits" style=" font-weight:bold">Fruit et boisson naturel</a></li>
+						<li><a href="#" style=" font-weight:bold">Riz local</a></li>
 						<li><a href="../index/index.php?menu7=tubercules" style=" font-weight:bold">Tubercule</a></li>
+						<li><a href="../index/index.php?menu5=condiments" style=" font-weight:bold">Condiment</a></li>
 					  </ul>
 					</li>
 					<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Boutique <span class="caret"></span></a>
