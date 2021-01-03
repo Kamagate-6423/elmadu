@@ -109,7 +109,10 @@
 					<div class="col-xs-4 hidden-sm hidden-md hidden-lg" >
 						<img src="../public/image/logo.jpg" class="img-responsive"> 
 					</div>
-					<h1 class="col-xs-8 titre">De La Chair Fraîche</h1>
+					<div class="col-xs-8 titre">
+					<h1 >KAFISSA</h1>
+					<h2 class="hidden-xs hidden-sm">Les produits locaux</h2>
+					</div>
 				</div>
 				<div class="col-xs-12 col-sm-5 col-md-4 col-lg-4">
 					<div class="panel panel-default" style="height:100px">
