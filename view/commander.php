@@ -92,7 +92,7 @@ require('header.php') ;
 <?php 
 }else{
 	
-	$_SESSION['connexionEchouer']="Connectez vous avant de faire passer une commande, sinon inscrivez-vous";
+	$_SESSION['connexionEchouer']="Connectez vous avant de faire passer une commande, sinon inscrivez-vous <a href='../view/client.php?inscrire=inscrire'>ici</a>.";
 	$_SESSION['inscription']="";
 	
 	header('location:client.php');
