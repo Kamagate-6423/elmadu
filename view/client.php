@@ -100,8 +100,6 @@ if((isset($_POST['tel'])) || (isset($_POST['passe1']) && isset($_POST['passe2'])
 	?> 
 			<form method="post" action="../controller/requeteClients.php?inscription=inscription">
 				<fieldset class="field"><legend>Inscription</legend>
-				
-				<
 					<table cellspacing="20">
 						<tr>
 							<td> <label for="nomCli">Nom<span style="color:red; font-size:16px"> *</span></label> </td>

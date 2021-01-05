@@ -41,7 +41,7 @@
 		unset($_SESSION['panier']);
 	}else{
 		
-		$_SESSION['commander']="Vous devez vous connecter avant de faire passer une commande sinon inscrivez-vous.";
+		$_SESSION['commander']="Vous devez vous connecter avant de faire passer une commande sinon inscrivez-vous .";
 		
 	}
 	

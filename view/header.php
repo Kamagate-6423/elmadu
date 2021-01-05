@@ -68,7 +68,7 @@
 				<div class="col-sm-7 col-md-6 col-lg-6"><a href="../view/panier.php" class="btn btn-success" style="height:30px; font-weight:bold" ><span class="glyphicon  glyphicon-shopping-cart"></span> Panier</a>:<span id="compt"><span class="compt"><?=$panier->compt()?></span></span>
 				</div>
 				<div class="col-sm-5 col-md-6 col-lg-6">
-					<span>Total: </span><span id="total"><?=$panier->total()?></span><span style="color:white"> fcfa </span></br>
+					<span>Total: </span><span id="total" style="color:red;font-weight:bold"><?=$panier->total()?></span><span style="color:white"> fcfa </span></br>
 <?php  				
 		//pour afficher Voir votre commande ou Commandez
 					$idCli="";
@@ -109,7 +109,10 @@
 					<div class="col-xs-4 hidden-sm hidden-md hidden-lg" >
 						<img src="../public/image/logo.jpg" class="img-responsive"> 
 					</div>
-					<h1 class="col-xs-8 titre">De La Chair Fraîche</h1>
+					<div class="col-xs-8 titre">
+					<h1 >KAFISSA</h1>
+					<h2 class="hidden-xs hidden-sm">Les produits locaux</h2>
+					</div>
 				</div>
 				<div class="col-xs-12 col-sm-5 col-md-4 col-lg-4">
 					<div class="panel panel-default" style="height:100px">
@@ -161,11 +164,14 @@
 					  <a href="../index/index.php?menu4=poussinsChairs" class="dropdown-toggle"role="button">Oeufs
 					  </a>
 					</li>
+					<li class="dropdown">
+					  <a href="../index/index.php?menu6=fruits" class="dropdown-toggle"role="button">Fruit et boisson</a>
+					</li>
 					<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vivriers<span class="caret"></span></a>
 					  <ul class="dropdown-menu">
-						<li><a href="../index/index.php?menu5=condiments" style=" font-weight:bold">Condiment</a></li>
-						<li><a href="../index/index.php?menu6=fruits" style=" font-weight:bold">Fruit et boisson naturel</a></li>
+						<li><a href="#" style=" font-weight:bold">Riz local</a></li>
 						<li><a href="../index/index.php?menu7=tubercules" style=" font-weight:bold">Tubercule</a></li>
+						<li><a href="../index/index.php?menu5=condiments" style=" font-weight:bold">Condiment</a></li>
 					  </ul>
 					</li>
 					<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Boutique <span class="caret"></span></a>

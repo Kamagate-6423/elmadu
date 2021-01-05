@@ -13,7 +13,6 @@ header > div{
 }
 header{
 	text-align:center;
-	/*margin-bottom:10px;*/
 	background-color:rgba(0,200,0,0.2);
 }
 #nav{
@@ -46,24 +45,6 @@ nav div div ul li:hover{
 	color:#000;
 
 }
-
-/*nav div div ul li ul li:hover{
-	background-color:green;
-	font-weight:bold;
-	color:#FFF;
-
-}
-nav div div ul li ul li{
-	background-color:green;
-	font-weight:bold;
-	color:#FFF;
-
-}
-nav div div ul li ul li a{
-	
-	font-weight:bold;
-	color:#FFF;
-}*/
 
 
 /**********************La partie section********************************/
@@ -112,7 +93,6 @@ section div:hover {
 
 footer{
 	margin-top:10px;
-	/*background-color:rgba(100,100,100,0.3);*/
 }
 footer table{
 	width:100%;
@@ -133,8 +113,15 @@ footer table thead th{
 
 .pouletMortChair .image{
 	max-height:auto;
-	border:1px inset green;
 	border-bottom:none;
+}
+.pouletMortChair img:hover{
+	/*L'image est grossie de 25% */
+-webkit-transform:scale(1.0); /* Safari et Chrome */
+-moz-transform:scale(1.0); /* Firefox */
+-ms-transform:scale(1.0); /* Internet Explorer 9 */
+-o-transform:scale(1.0); /* Opera */
+transform:scale(1.0);
 }
 legend{
 	margin-left:10px;
@@ -142,11 +129,11 @@ legend{
 }
 .pouletMortChair .PCongele .prix, .section .PCongele .prix{
 	font-size:125%;
-	font-weight:bold;
+	font-weight:;
 	text-align:center;
 	color:red;
 	height:auto;
-	background-color:rgba(0,255,100,0.5);
+	background-color:#FFF;
 	margin-bottom:10px;
 	z-index:2;
 }
@@ -154,13 +141,19 @@ legend{
 	font-weight:bold;
 	height:30px;
 }
+.voirProduit img:hover{
+	/*L'image est grossie de 25% */
+-webkit-transform:scale(1.25); /* Safari et Chrome */
+-moz-transform:scale(1.25); /* Firefox */
+-ms-transform:scale(1.25); /* Internet Explorer 9 */
+-o-transform:scale(1.25); /* Opera */
+transform:scale(1.30);
+}
 /***********************La partie oeufs**************************/
 .oeufs{
 	margin:10px;
 }
-/*.oeufs .image{
-	max-height:160px;
-}*/
+
 .oeufs .cartonPrix{
 	text-align:center;
 	height:50px;
@@ -180,9 +173,6 @@ legend{
 	margin-bottom:20px;
 }
 
-/*img{
-	border-radius:40%;
-}*/
 
 /********************La partie panier***********************/
 
@@ -225,20 +215,16 @@ table.facture tfoot {
 			height:auto;
 		}
 		
-		/*.voirProduit div{
-			border:1px solid black;
-		}*/
-		
-		.voirProduit .voirImage, .voirProduit .voirDescript{
-			height:auto;
-		}
-		
-		.voirProduit .Ajouter, .voirProduit .Retour{
-			height:40px;
-		}
-		.voirProduit button{
-			width:100%;
-		}
+.voirProduit .voirImage, .voirProduit .voirDescript{
+	height:auto;
+}
+
+.voirProduit .Ajouter, .voirProduit .Retour{
+	height:40px;
+}
+.voirProduit button{
+	width:100%;
+}
 		
 .ajoutPanier{
 	font-weight:bold;
@@ -304,7 +290,6 @@ input {
 		max-height:200px;
 	}
 	img{
-	/*border-radius:20%;*/
 	max-height:300px;
 		}
 	section .slidee{
@@ -329,6 +314,9 @@ input {
 		color:white;
 		font-weight:bold;
 	}
+	.PCongele{
+	border:1px solid green;
+}
 }
 
 @media screen and (min-width:400px) and (max-width:500px){
@@ -339,7 +327,6 @@ input {
 		max-height:200px;
 	}
 	img{
-	/*border-radius:20%;*/
 	max-height:300px;
 		}
 	section .slidee{
@@ -367,6 +354,9 @@ input {
 		color:white;
 		font-weight:bold;
 	}
+	.PCongele{
+	border:1px solid green;
+}
 }
 @media screen and (min-width:500px) and (max-width:700px){
 	.sociaux{
@@ -397,7 +387,7 @@ input {
 
 /*************************************Les effets du style******************************************/
 
-.PCongele .image:hover, .oeufs .image:hover, .poussins .PCongele .image:hover, .section > .differentsProduits > a .produit:hover{
+.PCongele:hover, .section > .differentsProduits > a .produit:hover{
 		ackground-color:#777777;
 		box-shadow:1px 1px 5px 1px;
 	}

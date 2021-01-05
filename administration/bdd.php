@@ -1,9 +1,9 @@
 <?php
 	class BDD{
-		private $serveur='hostingmysql335.amen.fr';
+		private $serveur='localhost';
 		private $baseDeDonnee='kafissa';
-		private $utilisateur='kelm6423';
-		private $motDePasse='Kelm1996.Maman';
+		private $utilisateur='root';
+		private $motDePasse='';
 		private $connexion;
 		
 		public function __construct($serveur=NULL, $baseDeDonnee=NULL, $utilisateur=NULL, $motDePasse=NULL){
