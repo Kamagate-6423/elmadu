@@ -169,7 +169,7 @@
 					</li>
 					<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vivriers<span class="caret"></span></a>
 					  <ul class="dropdown-menu">
-						<li><a href="#" style=" font-weight:bold">Riz local</a></li>
+						<li><a href="../index/index.php?menu8=riz" style=" font-weight:bold">Riz local</a></li>
 						<li><a href="../index/index.php?menu7=tubercules" style=" font-weight:bold">Tubercule</a></li>
 						<li><a href="../index/index.php?menu5=condiments" style=" font-weight:bold">Condiment</a></li>
 					  </ul>
