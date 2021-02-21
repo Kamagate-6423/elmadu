@@ -11,23 +11,23 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td><div><a href="#">Les particuliers</a></div></td>
-					<td><a href="#"><div class="hidden-xs col-sm-7 col-md-7 col-lg-6">Facebook</div><div class="col-xs-12 col-sm-3 col-md-4 col-lg-6 "><img src="../public/image/face_icon.png" alt="" class="img-responsive" /></div></a></td>
+					<td><a href="#">Les particuliers</a></td>
+					<td><a href="https://api.whatsapp.com/send?phone=0022548582862" class="hidden-xs hidden-sm">WhatsApp</a><a href="https://api.whatsapp.com/send?phone=0022548582862" class="hidden-md hidden-lg"><img src="../public/image/whatsapp-logo.png" class="img-responsive" style="border-radius:50px; margin-left:20px"></a></td>
 					<td><a href="mailto:kelm6423@gmail.com">kelm6423@gmail.com</a></td>
 				</tr>
 				<tr>
-					<td><div><a href="#">Les restaurants</a></div></td>
-					<td><a href="#"><div class="hidden-xs col-sm-7 col-md-7 col-lg-6">YouTube</div><div class="col-xs-12 col-sm-3 col-md-4 col-lg-6"><img src="../public/image/youtube_icon.png" alt="" class="img-responsive" /></div></a></td>
+					<td><a href="#">Les restaurants</a></td>
+					<td><a href="https:m.me/kamatup.ci" class="hidden-xs hidden-sm">Messenger</a><a href="https:m.me/kamatup.ci" class="hidden-md hidden-lg"><img src="../public/image/messenger.png" class="img-responsive" style="margin-left:20px"></a></td>
 					<td><div><a href="tel:0022508877639">00225 08-87-76-39</a></div><br/></td>
 				</tr>
 				<tr>
-					<td><div><a href="#">Les entreprises</a></div></td>
-					<td><a href="#"><div class="hidden-xs col-sm-7 col-md-7 col-lg-6">Twitter</div><div class="col-xs-12 col-sm-3 col-md-4 col-lg-6"><img src="../public/image/twitter_icon.png" alt="" class="img-responsive" /></div></a></td>
+					<td><a href="#">Les entreprises</a></td>
+					<td><a href="https:fb.me/kamatup.ci" class="hidden-xs hidden-sm">Facebook</a><a href="https:fb.me/kamatup.ci" class="hidden-md hidden-lg" ><img src="../public/image/face_icon.png" class="img-responsive" style="margin-left:20px"></a></td>
 					<td><div><a href="#">Daloa, quartier orly</a></div></td>
 				</tr>
 				<tr>
-					<td><div><a href="#">Les revendeurs</a></div></td>
-					<td><a href="#"><div class="hidden-xs col-sm-7 col-md-7 col-lg-6">Linkedin</div><div class="col-xs-12 col-sm-3 col-md-4 col-lg-6"><img src="../public/image/linkedin_icon.jpg" alt="" class="img-responsive" /></div></a></td>
+					<td><a href="#">Les revendeurs</a></td>
+					<td></td>
 					<td></td>
 				</tr>
 			

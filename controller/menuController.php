@@ -50,12 +50,13 @@
 			}
 		}
 		
-				$oeufs= new Oeufs();
+				$poissons= new Poisson();
 		if(isset($_GET['menu3'])){ 
 			$menu3=verifierDonne($_GET['menu3']);
 			if(isset($menu3)){
 				if($menu3=='oeufsPondeuses'){
-					$oeufs->poissons();
+					$poissons->poissons();
+					$poissons->poissonGues();
 					//$oeufs->oeufsAfricains();
 				}else{
 					require('../index/index.php');
@@ -63,12 +64,12 @@
 			}
 		}
 		
-				$poussins=new Poussins();
+				$oeufs=new Oeuf();
 		if(isset($_GET['menu4'])){ 
 			$menu4=verifierDonne($_GET['menu4']);
 			if(isset($menu4)){
 				if($menu4=='poussinsChairs'){
-					$poussins->oeufs();
+					$oeufs->oeufs();
 				}else{
 					require('../index/index.php');
 				}
@@ -90,6 +91,17 @@
 			if(isset($menu6)){
 				if($menu6=='fruits'){
 					$vivrieres->ffruits();
+					$vivrieres->fnectars();
+					$vivrieres->feaux();
+				}else{
+					require('../index/index.php');
+				}
+			}
+		}else if(isset($_GET['menu66'])){ 
+			$menu66=verifierDonne($_GET['menu66']);
+			if(isset($menu66)){
+				if($menu66=='cereales'){
+					$vivrieres->fcereales();
 				}else{
 					require('../index/index.php');
 				}
@@ -171,7 +183,7 @@
 			$section=verifierDonne($_GET['section']);
 			if(isset($section)){
 				if($section=='oeufs'){
-					$poussins->oeufs();
+					$oeufs->oeufs();
 				}else if($section=='pouletCom'){
 					$pouletsMorts->pouletsChairsC();
 					$pouletsMorts->pouletsChairsM();
@@ -187,7 +199,8 @@
 				}else if($section=='canards'){
 					$pouletsMorts->canards();
 				}else if($section=='poissons'){
-					$oeufs->poissons();
+					$poissons->poissons();
+					$poissons->poissonGues();
 				}else if($section=='pondeuses'){
 					$pouletsMorts->pouletsPondeuses();
 				}else if($section=='boeufs'){
@@ -198,6 +211,33 @@
 					$pouletsVivants->bouc();
 				}else if($section=='condiments'){
 					$vivrieres->fcondiments();
+				}else if($section=='cereales'){
+					$vivrieres->fcereales();
+					
+				}else if($section=='denree'){
+					$vivrieres->ftubercules();
+					$vivrieres->fcondiments();
+					
+				}else if($section=='cereale'){
+					$vivrieres->fcereales();
+					
+				}else if($section=='viande'){
+					$pouletsVivants->boeuf();
+					$pouletsVivants->mouton();
+					$pouletsVivants->bouc();
+					$poissons->poissons();
+					$poissons->poissonGues();
+					$pouletsMorts->pouletsChairsC();
+					$pouletsMorts->pouletsChairsM();
+					$pouletsMorts->cokeles();
+					$pouletsMorts->pafricains();
+					$pouletsMorts->pintades();
+					$pouletsMorts->canards();
+					
+				}else if($section=='jus'){
+					$vivrieres->ffruits();
+					$vivrieres->fnectars();
+					$vivrieres->feaux();
 				}else{
 					require('../index/index.php');
 				}

@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>De la chaire fraîche</title>
+    <title>Produit alimentaire local</title>
 	
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link rel="stylesheet" href="../public/css/bootstrap.css">
@@ -36,22 +36,22 @@
 				<?php 
 				//$_SESSION['connexion']="connextion";
 			if(isset($_SESSION['connexion'])){ ?>
-				<div class="col-sm-12 col-md-12 col-lg-12">
-					<form method="post" action="../controller/detruireSession.php">
+				<div class="col-sm-12 col-md-12 col-lg-12" style="padding-top:10px;">
+					<form method="post" action="../controller/detruireSession.php" class="col-sm-6 col-md-5 col-lg-4">
 					<input type="number" name="idCli" value="<?=$_SESSION['client']['idClien']?>" class="hidden">
 					<button type="submit" class="btn-success">Deconnecter</button>
 					</form>
-					<form method="post" action="../index/index.php">
+					<form method="post" action="../index/index.php" class="col-sm-6 col-md-5 col-lg-4">
 					<input type="text" name="modifierPasse" value="modifierPasse" class="hidden">
 					<button type="submit" class="btn-success">Profil</button>
 					</form>
 					<!--a class="btn btn-warning" style="height:30px" href="../controller/detruireSession.php" class="deconnecter">Deconnecter</a-->
 				</div>
 			<?php }else{  ?>
-				<div class=" col-sm-4 col-md-6 col-lg-6">
+				<div class=" col-sm-4 col-md-6 col-lg-6 inscrire" style="">
 					<a href="../view/client.php?inscrire=inscrire" class="btn btn-success" style="height:30px; font-weight:bold">Inscrire</a>
 				</div>
-				<div class="col-sm-4 col-md-4 col-lg-4">
+				<div class="col-sm-4 col-md-4 col-lg-4 connecter" style="">
 					<a href="../view/client.php?connecter=connecter" class="btn btn-success" style="height:30px; font-weight:bold;">Connecter</a>
 				</div>
 			<?php } ?>
@@ -61,11 +61,11 @@
 			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 " style="text-align:center"><?=$_SESSION['client']['nomCli'];?> 
 			<?=$_SESSION['client']['prenomCli'];?></div>
 <?php }else{ ?>
-			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="text-align:center"> Nom et Prénom du client </div>
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="text-align:center"> </div>
 <?php } ?>
 
 			<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 " style="padding-right:0px;"> 
-				<div class="col-sm-7 col-md-6 col-lg-6"><a href="../view/panier.php" class="btn btn-success" style="height:30px; font-weight:bold" ><span class="glyphicon  glyphicon-shopping-cart"></span> Panier</a>:<span id="compt"><span class="compt"><?=$panier->compt()?></span></span>
+				<div class="col-sm-7 col-md-6 col-lg-6" style="padding-top:10px"><a href="../view/panier.php" class="btn btn-success" style="height:30px; font-weight:bold" ><span class="glyphicon  glyphicon-shopping-cart"></span> Panier</a>:<span id="compt"><span class="compt"><?=$panier->compt()?></span></span>
 				</div>
 				<div class="col-sm-5 col-md-6 col-lg-6">
 					<span>Total: </span><span id="total" style="color:red;font-weight:bold"><?=$panier->total()?></span><span style="color:white"> fcfa </span></br>
@@ -93,7 +93,7 @@
 			<?php
 							}else{
 			?>
-							<a href="../view/panier.php" class="btn btn-success ">Commander</a>
+							<a href="../view/panier.php" class="btn btn-success hidden-xs ">Commander</a>
 			<?php
 							}
 					} ?>				
@@ -103,22 +103,29 @@
 
 		   <header class="container-fluid">
 				<div class="hidden-xs col-sm-2 col-md-3 col-lg-2" >
-					<img src="../public/image/logo.jpg" class="img-responsive"> 
+					<img src="../public/image/logo1.jpg" class="img-responsive"> 
 				</div>
-				<div class="col-xs-12 col-sm-5 col-md-5 col-lg-6" style="max-height:100px">
+				<div class="col-xs-12 col-sm-7 col-md-6 col-lg-7" style="max-height:90px;">
 					<div class="col-xs-4 hidden-sm hidden-md hidden-lg" >
-						<img src="../public/image/logo.jpg" class="img-responsive"> 
+						<img src="../public/image/logo1.jpg" class="img-responsive"> 
 					</div>
-					<div class="col-xs-8 titre">
-					<h1 >KAFISSA</h1>
-					<h2 class="hidden-xs hidden-sm">Les produits locaux</h2>
+					<div class="col-xs-8 col-sm-12 col-md-12 col-lg-12 titre">
+						<h1 class="titre1 ">PRODUIT ALIMENTAIRE</h1>
+						<h2 class="hidden-xs titre2 " style="text-align:center">La Qualité, la Disponibilité notre Priorité</h2>
 					</div>
+					
 				</div>
-				<div class="col-xs-12 col-sm-5 col-md-4 col-lg-4">
-					<div class="panel panel-default" style="height:100px">
-						<div class="panel-heading">Contacts</div>
-						<div class="panel-body">
-							<a href="tel:0022508877639">0022508877639</a> / <a href="tel:0022564230411">0022564230411</a>
+				<h2 class="hidden-sm hidden-md hidden-lg titre2 " style="text-align:center">La Qualité, la Disponibilité notre Priorité</h2>
+				<div class="hidden-xs col-sm-3 col-md-3 col-lg-3">
+					<div >
+						
+						<div class="col-xs-4 col-sm-6 col-md-4 col-lg-3" ><a href="https://api.whatsapp.com/send?phone=0022548582862"><img src="../public/image/whatsapp-logo.png" class="img-responsive" style="border-radius:50px"></a></div>
+						<div class="col-xs-4 col-sm-6 col-md-4 col-lg-3"><a href="https:m.me/kamatup.ci"><img src="../public/image/messenger.png" class="img-responsive"></a></div>
+						<div class="col-xs-4 col-sm-6 col-md-4 col-lg-3"><a href="https:fb.me/kamatup.ci"><img src="../public/image/face_icon.png" class="img-responsive"></a></div>
+						
+						<br/><br/><br/>
+						<div >
+							<a href="tel:0022508877639">002250708877639</a> / <a href="tel:0022564230411">002250564230411</a>
 						</div>
 					</div>
 				</div>
@@ -165,16 +172,16 @@
 					  </a>
 					</li>
 					<li class="dropdown">
-					  <a href="../index/index.php?menu6=fruits" class="dropdown-toggle"role="button">Fruit et boisson</a>
+					  <a href="../index/index.php?menu6=fruits" class="dropdown-toggle"role="button">Jus de fruit</a>
 					</li>
 					<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vivriers<span class="caret"></span></a>
 					  <ul class="dropdown-menu">
-						<li><a href="#" style=" font-weight:bold">Riz local</a></li>
+						<li><a href="../index/index.php?menu66=cereales" style=" font-weight:bold">Céréale locale</a></li>
 						<li><a href="../index/index.php?menu7=tubercules" style=" font-weight:bold">Tubercule</a></li>
 						<li><a href="../index/index.php?menu5=condiments" style=" font-weight:bold">Condiment</a></li>
 					  </ul>
 					</li>
-					<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Boutique <span class="caret"></span></a>
+					<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Autres <span class="caret"></span></a>
 					  <ul class="dropdown-menu">
 						<li><a href="../index/index.php?menu8=riz" style=" font-weight:bold">Du riz</a></li>
 						<li><a href="../index/index.php?menu9=huiles" style=" font-weight:bold">Huile</a></li>

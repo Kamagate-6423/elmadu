@@ -9,12 +9,15 @@
 
 /*************************La partie header************************************************/
 header > div{
-	min-height:100px;
+	min-height:90px;
 }
 header{
 	text-align:center;
 	background-color:rgba(0,200,0,0.2);
 }
+.inscrire, .connecter{
+		padding-top:10px
+	}
 #nav{
 	position:sticky;
 	top:50px;
@@ -279,12 +282,24 @@ input {
 
 /********************************La partie responsive***************************/
 @media screen and (max-width:400px){
+	.inscrire{
+		padding-top:0px;
+	}
+	.connecter{
+		padding-top:10px
+	}
 	nav div ul li ul >li >a{
 		color:#FFF;
 	}
-	.titre{
-		font-size:25px;
+	.titre1{
+		margin-top:0px;
+		font-size:20px;
 		display:block;
+		font-weight:bold;
+	}
+	.titre2{
+		margin-top:0px;
+		font-size:15px;
 	}
 	.pouletsDeChairsMorts .image, .oeufs .image, .poussins .poussinsImage, section .produit{
 		max-height:200px;
@@ -320,6 +335,23 @@ input {
 }
 
 @media screen and (min-width:400px) and (max-width:500px){
+	.inscrire{
+		padding-top:0px;
+	}
+	.connecter{
+		padding-top:10px;
+	}
+	.titre1{
+		margin-top:0px;
+		font-size:20px;
+		display:block;
+		font-weight:bold;
+	}
+	.titre2{
+		margin-top:0px;
+		font-size:15px;
+	}
+	
 	nav .dropdown-menu li a{
 		color:#FFF;
 	}
