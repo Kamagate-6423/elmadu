@@ -9,12 +9,7 @@ if((isset($_POST['tel'])) || (isset($_POST['passe1']) && isset($_POST['passe2'])
 		include('header.php');
 	?>
 				<div  class="form1">
-				<div class="nb">
-					<dl><dt>NB:</dt>
-						<dd>Le paiement se fait seulement à la livraison</dd>
-						<dd>Une fois confirmer vous allez recevoir un appel téléphonique dans 30 min avant la livraison</dd>
-					</dl>
-				</div>
+				
 				
 	<?php 		if(isset($_SESSION['inscription']) || isset($_SESSION['connexion']) || !empty($_SESSION['connexionEchouer']) || isset($_SESSION['votrePasse']) || isset($_SESSION['votrePasse1'])){
 				
@@ -48,7 +43,7 @@ if((isset($_POST['tel'])) || (isset($_POST['passe1']) && isset($_POST['passe2'])
 					<table>
 						<tr>
 							<td> <label for="telCli1"> Numero de téléphone</label></td>
-							<td><input type="tel" id="telCli1" name="telCli" required><br/><span class="help-inline telCli1"></span></td>
+							<td><span style="font-weight:; font-size:18px; background-color:#EEE; border:2px solid #555">+225</span><input type="tel" id="telCli1" name="telCli" required><br/><span class="help-inline telCli1"></span></td>
 						</tr>
 						<tr>
 							<td> <label for="passCli1">Mot de passe</label> </td><td><input type="password" id="passCli1" name="passCli" required><br/><span class="passCli1"></span></td>
@@ -81,7 +76,7 @@ if((isset($_POST['tel'])) || (isset($_POST['passe1']) && isset($_POST['passe2'])
 						</tr>
 						<tr>
 							<td> <label for="tel"> Numero de téléphone</label></td>
-							<td><input type="tel" id="tel" name="tel" maxlength="13" required><br/><span class="help-inline tel"></span></td>
+							<td><span style="font-weight:; font-size:18px; background-color:#EEE; border:2px solid #555">+225</span><input type="tel" id="tel" name="tel" maxlength="13" required><br/><span class="help-inline tel"></span></td>
 						</tr>
 					</table>
 					<table style="margin-top:20px; width:100%;">
@@ -115,7 +110,7 @@ if((isset($_POST['tel'])) || (isset($_POST['passe1']) && isset($_POST['passe2'])
 						</tr>
 						<tr>
 							<td> <label for="telCli"> Numero de téléphone<span style="color:red; font-size:16px"> *</span></label></td>
-							<td><input type="tel" id="telCli" name="telCli" maxlength="13" required class="inscrireTel"/><br/><span class="telCli"></span></td>
+							<td><span style="font-weight:; font-size:18px; background-color:#EEE; border:2px solid #555">+225</span><input type="tel" id="telCli" name="telCli" maxlength="13" required class="inscrireTel"/><br/><span class="telCli"></span></td>
 						</tr>
 						<tr>
 							

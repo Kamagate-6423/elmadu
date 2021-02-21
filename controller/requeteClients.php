@@ -14,11 +14,11 @@ if(isset($_GET['inscription']) && ($_POST['passCli']===$_POST['passCliConf'])){
 	$adresseCli=verifierDonne($_POST['adresseCli']);
 	$telCli=verifierDonne($_POST['telCli']);
 	
-	$regTel='/^\+?[0-9]{8,13}$/';
+	$regTel='/^\+?[0-9]{10,15}$/';
 	
 	if(preg_match($regTel, $telCli)){
 	
-	$telCli=substr($telCli,-8);
+	$telCli=substr($telCli,-10);
 	
 	$reqListe='SELECT tel_cli FROM clients WHERE tel_cli=?';//initier pour vérifier si le numero a deja ete l'objet d'une inscriprtion
 	$req1=$bdd->requetes($reqListe,array($telCli)); // la class bdd est definie dans dossier administration
@@ -60,7 +60,7 @@ if(isset($_GET['inscription']) && ($_POST['passCli']===$_POST['passCliConf'])){
 		$telCli=verifierDonne($_POST['telCli']);
 		$passCli=verifierDonne($_POST['passCli']);
 		
-		$telCli=substr($telCli,-8);
+		$telCli=substr($telCli,-10);
 		
 		$reqCli='SELECT * FROM clients WHERE tel_cli=:tel AND pass_cli=:pass';
 		$varCli=array(

@@ -10,26 +10,26 @@
 		function requete($categorie)
 		{
 			$bdd= new BDD();
-			$reqSql='SELECT id_pro, image_pro, categorie, nom_pro, chemin_desti, inter_poids, unite, prix, stock, info_pro FROM produits WHERE categorie=? ORDER BY id_pro';
+			$reqSql='SELECT id_pro, image_pro, categorie, nom_pro, chemin_desti, inter_poids, unite, prix, stock, info_pro, alt FROM produits WHERE categorie=? ORDER BY id_pro';
 			$reqVariable=array($categorie);
 			$req = $bdd->requetes($reqSql,$reqVariable);
 			
 			return $req;
 		}
 
-	class PouletsMorts{
+	class PouletsMorts{ /// class Volailles
 		
 		public function pouletsChairsC(){
 			$req=requete('Pchair');
 ?>
 			<div>
-				<fieldset><legend>POULETS DE CHAIR ENTIERS</legend>
+				<fieldset><legend><h2 style="font-size:100%">Poulet de chair entier</h2></legend>
 				<?php	 
 				while($donnee=$req->fetch()){
 ?>
 					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
 						<div class="image">
-							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
 							</a>
 						</div>
 						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> l'entier <?=$donnee['prix']?> fcfa<br/>
@@ -54,13 +54,13 @@
 				$req=requete('Mchair');
 ?>		
 			<div>
-				<fieldset><legend >DIFFERENTES PARTIES DU POULETS</legend>
+				<fieldset><legend><h2 style="font-size:100%">Différents parties du poulet</h2></legend>
 				<?php	 
 			while($donnee=$req->fetch()){
 ?>
 				<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
 						<div class="image">
-							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
 							</a>
 						</div>
 						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>
@@ -87,14 +87,14 @@
 
 ?>
 			<div>
-				<fieldset><legend>POULETS PONDEUSES CONGELES</legend>
+				<fieldset><legend><h2 style="font-size:100%">Poulet pondeuse</h2></legend>
 		
 				<?php	 
 			while($donnee=$req->fetch()){
 ?>
 					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
 						<div class="image">
-							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
 							</a>
 						</div>
 						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>
@@ -119,13 +119,13 @@
 			$req=requete('cokele');
 ?>
 			<div>
-				<fieldset><legend>Côkélés</legend>
+				<fieldset><legend><h2 style="font-size:100%">Côkélé</h2></legend>
 				<?php	 
 				while($donnee=$req->fetch()){
 ?>
 					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
 						<div class="image">
-							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
 							</a>
 						</div>
 						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>
@@ -150,13 +150,13 @@
 			$req=requete('Pafricain');
 ?>
 			<div>
-				<fieldset><legend>POulets africains</legend>
+				<fieldset><legend><h2 style="font-size:100%">Poulet Africain</h2></legend>
 				<?php	 
 				while($donnee=$req->fetch()){
 ?>
 					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
 						<div class="image">
-							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
 							</a>
 						</div>
 						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>
@@ -181,13 +181,13 @@
 			$req=requete('pintade');
 ?>
 			<div>
-				<fieldset><legend>Pintades</legend>
+				<fieldset><legend><h2 style="font-size:100%">Pintade</h2></legend>
 				<?php	 
 				while($donnee=$req->fetch()){
 ?>
 					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
 						<div class="image">
-							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
 							</a>
 						</div>
 						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>
@@ -212,13 +212,13 @@
 			$req=requete('canard');
 ?>
 			<div>
-				<fieldset><legend>Canards</legend>
+				<fieldset><legend><h2 style="font-size:100%">Canard</h2></legend>
 				<?php	 
 				while($donnee=$req->fetch()){
 ?>
 					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
 						<div class="image">
-							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
 							</a>
 						</div>
 						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>
@@ -251,14 +251,14 @@
 
 ?>
 			<div>
-				<fieldset>	<legend>Bœuf</legend>
+				<fieldset>	<legend><h2 style="font-size:100%">Viande de Bœuf</h2></legend>
 		
 				<?php	 
 			while($donnee=$req->fetch()){
 ?>
 				<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
 						<div class="image">
-							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
 							</a>
 						</div>
 						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>
@@ -284,14 +284,14 @@
 
 ?>
 			<div>
-				<fieldset>	<legend>Mouton</legend>
+				<fieldset>	<legend><h2 style="font-size:100%">Viande de Mouton</h2></legend>
 		
 				<?php	 
 			while($donnee=$req->fetch()){
 ?>
 					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
 						<div class="image">
-							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
 							</a>
 						</div>
 						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>
@@ -316,14 +316,14 @@
 
 ?>
 			<div>
-				<fieldset>	<legend>Bouc</legend>
+				<fieldset>	<legend><h2 style="font-size:100%">Viande de Cabris</h2></legend>
 		
 				<?php	 
 			while($donnee=$req->fetch()){
 ?>
 					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
 						<div class="image">
-							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
 							</a>
 						</div>
 						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>
@@ -344,29 +344,7 @@
 			
 <?php
 		}
-		/*
-		public function pouletsVivantsAfricains(){
 		
-		$req=requete(24,27);
-
-?>
-			<div>
-				<fieldset>	<legend>POULETS AFRICAINS</legend>
-		
-				<?php	 
-			while($donnee=$req->fetch()){
-?>
-					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele"><div class="image"><a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive"></a></div><div class="prix"><?php echo $donnee['inter_poids']; ?> <br/> 1 Kg à <?=$donnee['prix']?> fcfa<br/><a href="../controller/requetePanier.php?id=<?=$donnee['id_pro'];?>" class="btn btn-success ajoutPanier"><span class="glyphicon glyphicon-plus" style="color:yellow"></span>Ajouter au panier</a><br/><?php echo $donnee['stock']; ?> </div></div>
-<?php
-	}
-			$req->closeCursor();
-?>
-				</fieldset>
-			</div>
-			
-<?php
-		}
-	*/
 	}
 
 ?>
@@ -374,19 +352,19 @@
 <?php /***********************Les Poissons*********************************/ ?>
 
 <?php
-	class Oeufs{
+	class Poisson{
 		public function poissons(){
 
 		$req=requete('poisson');
 ?>		
 		<div class="oeufs">
-			<fieldset>	<legend>Poissons</legend>
+			<fieldset>	<legend><h2 style="font-size:100%">Poisson</h2></legend>
 <?php	 
 			while($donnee=$req->fetch()){
 ?>
 					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
 						<div class="image">
-							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
 							</a>
 						</div>
 						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>
@@ -406,19 +384,32 @@
 		</div>
 <?php
 		}
-		/*a ANNULER
-		public function oeufsAfricains(){
+		
+		public function poissonGues(){
 	
-			$req=requete(30,32);
+			$req=requete('poissonGues');
 
 		
 ?>		<div class="oeufs">
-			<fieldset>	<legend>Oeufs pour poulets africains</legend>
+			<fieldset>	<legend><h2 style="font-size:100%">Poisson de Guessabo</h2></legend>
 		
 <?php	 
 			while($donnee=$req->fetch()){
 ?>
-					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele"><div class="image"><a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive"></a></div><div class="prix"><?php echo $donnee['inter_poids']; ?> <br/> 1 Kg à <?=$donnee['prix']?> fcfa<br/><a href="../controller/requetePanier.php?id=<?=$donnee['id_pro']; ?>" class="btn btn-success ajoutPanier"><span class="glyphicon glyphicon-plus" style="color:yellow"></span>Ajouter au panier</a><br/><?php echo $donnee['stock']; ?> </div></div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
+						<div class="image">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
+							</a>
+						</div>
+						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>
+						<?php if($donnee['stock']=='En Stock'){ ?>
+								<a href="../controller/requetePanier.php?id=<?=$donnee['id_pro']?>" class="btn btn-success ajoutPanier"><span class="glyphicon glyphicon-plus" style="color:yellow"></span><span  class="ajoutAuPanier">Ajouter au panier</span></a>
+						<?php  	}else if($donnee['stock']=='Stock epuisé'){ ?>
+								<a href="#" class="btn btn-success ajoutPanierNon" style="background-color:rgb(200,0,0,0.7);">Stock épuisé</a>
+						<?php   } ?>
+							<br/><?php echo $donnee['stock']; ?> 
+						</div>
+					</div>
 <?php
 	}
 			$req->closeCursor();
@@ -427,25 +418,25 @@
 		</div>
 <?php
 		}
-		*/
+		
 	}
 	
 ?>
 
 <?php /******************Les oeufs********************/ ?>
 <?php
-	class Poussins{
+	class Oeuf{
 		public function oeufs(){
 			$req=requete('oeuf');
 
 	?>		<div class="poussins">
-				<fieldset>	<legend> Oeufs</legend>
+				<fieldset>	<legend><h2 style="font-size:100%"> Oeuf</h2></legend>
 					<?php	 
 			while($donnee=$req->fetch()){
 ?>
 					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
 						<div class="image">
-							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
 							</a>
 						</div>
 						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa le carton<br/>
@@ -477,13 +468,13 @@
 			$req=requete('tubercule');
 
 	?>		<div class="tubercules">
-				<fieldset>	<legend> Tubercules</legend>
+				<fieldset>	<legend><h2 style="font-size:100%"> Tubercule</h2></legend>
 					<?php	 
 			while($donnee=$req->fetch()){
 ?>
 					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
 						<div class="image">
-							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
 							</a>
 						</div>
 						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>
@@ -504,17 +495,49 @@
 <?php
 		}
 		
-		public function fcondiments(){
-			$req=requete('condiment');
+		
+		public function fcereales(){
+			$req=requete('cereale');
 
-	?>		<div class="condiments">
-				<fieldset>	<legend>Les condiments</legend>
+	?>		<div class="tubercules">
+				<fieldset>	<legend><h2 style="font-size:100%">Céréale</h2></legend>
 					<?php	 
 			while($donnee=$req->fetch()){
 ?>
 					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
 						<div class="image">
-							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
+							</a>
+						</div>
+						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>
+						<?php if($donnee['stock']=='En Stock'){ ?>
+								<a href="../controller/requetePanier.php?id=<?=$donnee['id_pro']?>" class="btn btn-success ajoutPanier"><span class="glyphicon glyphicon-plus" style="color:yellow"></span><span  class="ajoutAuPanier">Ajouter au panier</span></a>
+						<?php  	}else if($donnee['stock']=='Stock epuisé'){ ?>
+								<a href="#" class="btn btn-success ajoutPanierNon" style="background-color:rgb(200,0,0,0.7);">Stock épuisé</a>
+						<?php   } ?>
+							<br/><?php echo $donnee['stock']; ?> 
+						</div>
+					</div>
+<?php
+	}
+			$req->closeCursor();
+?>
+				</fieldset>
+			</div>
+<?php
+		}		
+		
+		public function fcondiments(){
+			$req=requete('condiment');
+
+	?>		<div class="condiments">
+				<fieldset>	<legend><h2 style="font-size:100%">Les Condiments</h2></legend>
+					<?php	 
+			while($donnee=$req->fetch()){
+?>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
+						<div class="image">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
 							</a>
 						</div>
 						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>
@@ -540,13 +563,13 @@
 			$req=requete('fruit');
 
 	?>		<div class="fruits">
-				<fieldset>	<legend>Les fruits</legend>
+				<fieldset>	<legend><h2 style="font-size:100%">Fruit</h2></legend>
 					<?php	 
 			while($donnee=$req->fetch()){
 ?>
 					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
 						<div class="image">
-							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
 							</a>
 						</div>
 						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>
@@ -567,6 +590,70 @@
 <?php
 		}
 		
+		
+		public function fnectars(){
+			$req=requete('nectar');
+
+	?>		<div class="fruits">
+				<fieldset>	<legend><h2 style="font-size:100%">Nectar</h2></legend>
+					<?php	 
+			while($donnee=$req->fetch()){
+?>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
+						<div class="image">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
+							</a>
+						</div>
+						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>
+						<?php if($donnee['stock']=='En Stock'){ ?>
+								<a href="../controller/requetePanier.php?id=<?=$donnee['id_pro']?>" class="btn btn-success ajoutPanier"><span class="glyphicon glyphicon-plus" style="color:yellow"></span><span  class="ajoutAuPanier">Ajouter au panier</span></a>
+						<?php  	}else if($donnee['stock']=='Stock epuisé'){ ?>
+								<a href="#" class="btn btn-success ajoutPanierNon" style="background-color:rgb(200,0,0,0.7);">Stock épuisé</a>
+						<?php   } ?>
+							<br/><?php echo $donnee['stock']; ?> 
+						</div>
+					</div>
+<?php
+	}
+			$req->closeCursor();
+?>
+				</fieldset>
+			</div>
+<?php
+		}
+
+		public function feaux(){
+			$req=requete('eau');
+
+	?>		<div class="fruits">
+				<fieldset>	<legend><h2 style="font-size:100%">Eau minérale</h2></legend>
+					<?php	 
+			while($donnee=$req->fetch()){
+?>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
+						<div class="image">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
+							</a>
+						</div>
+						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>
+						<?php if($donnee['stock']=='En Stock'){ ?>
+								<a href="../controller/requetePanier.php?id=<?=$donnee['id_pro']?>" class="btn btn-success ajoutPanier"><span class="glyphicon glyphicon-plus" style="color:yellow"></span><span  class="ajoutAuPanier">Ajouter au panier</span></a>
+						<?php  	}else if($donnee['stock']=='Stock epuisé'){ ?>
+								<a href="#" class="btn btn-success ajoutPanierNon" style="background-color:rgb(200,0,0,0.7);">Stock épuisé</a>
+						<?php   } ?>
+							<br/><?php echo $donnee['stock']; ?> 
+						</div>
+					</div>
+<?php
+	}
+			$req->closeCursor();
+?>
+				</fieldset>
+			</div>
+<?php
+		}
+
+		
 	}
 ?>
 
@@ -577,13 +664,13 @@
 			$req=requete('riz');
 
 	?>		<div class="riz">
-				<fieldset>	<legend> Votre riz préféré</legend>
+				<fieldset>	<legend><h2 style="font-size:100%"> Vos Riz préférés</h2></legend>
 					<?php	 
 			while($donnee=$req->fetch()){
 ?>
 					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
 						<div class="image">
-							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
 							</a>
 						</div>
 						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>
@@ -609,13 +696,13 @@
 			$req=requete('huile');
 
 	?>		<div class="huiles">
-				<fieldset>	<legend>Votre huile</legend>
+				<fieldset>	<legend><h2 style="font-size:100%">Vos Huiles</h2></legend>
 					<?php	 
 			while($donnee=$req->fetch()){
 ?>
 					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
 						<div class="image">
-							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
 							</a>
 						</div>
 						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>
@@ -642,13 +729,13 @@
 			$req=requete('assaisonnement');
 
 	?>		<div class="assaisonnements">
-				<fieldset>	<legend>Vos assaisonnements</legend>
+				<fieldset>	<legend><h2 style="font-size:100%">Assaisonnement</h2></legend>
 					<?php	 
 			while($donnee=$req->fetch()){
 ?>
 					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
 						<div class="image">
-							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
 							</a>
 						</div>
 						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>
@@ -673,13 +760,13 @@
 			$req=requete('petitDej');
 
 	?>		<div class="petitDej">
-				<fieldset>	<legend> Pétit déjeuné</legend>
+				<fieldset>	<legend> <h2 style="font-size:100%">Pétit Déjeuné</h2></legend>
 					<?php	 
 			while($donnee=$req->fetch()){
 ?>
 					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
 						<div class="image">
-							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
 							</a>
 						</div>
 						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>
@@ -704,13 +791,13 @@
 			$req=requete('boisson');
 
 	?>		<div class="boissons">
-				<fieldset>	<legend>Vos Boissons</legend>
+				<fieldset>	<legend><h2 style="font-size:100%">Vos Boissons</h2></legend>
 					<?php	 
 			while($donnee=$req->fetch()){
 ?>
 					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 PCongele">
 						<div class="image">
-							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="" class="img-responsive">
+							<a href="../view/voirProduit.php?id_pro=<?=$donnee['id_pro'];?>"><img src="../public/image/	<?php echo $donnee['image_pro']; ?>" alt="<?=$donnee['alt']?>" class="img-responsive">
 							</a>
 						</div>
 						<div class="prix"><?=$donnee['nom_pro']." "?><?php echo $donnee['inter_poids']." ".$donnee['unite']; ?> à <?=$donnee['prix']?> fcfa<br/>

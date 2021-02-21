@@ -11,7 +11,7 @@
 		$reqInfo='SELECT cli.id_cli id_cli, cli.nom_cli nom,
 					cli.prenom_cli prenom, cli.tel_cli tel, 
 					cli.email_cli email, com.id_cli comIdCli,
-					com.id_com id_com, com.lieux_liv lieux_liv,
+					com.id_com id_com, com.ville ville, com.quartier quartier, com.lieux_liv lieux_liv,
 					com.date_liv date_liv, com.heure_liv heure_liv,
 					com.date_liv date_liv, com.heure_liv heure_liv,
 					com.keys_pro keyss, com.qtes_pro qtes,
@@ -55,7 +55,7 @@
 									</tr>
 									<tr>
 										<td>Lieux de livraison</td>
-										<td><?=$donnee['lieux_liv']?></td>
+										<td><?php echo $donnee['ville'].", ".$donnee['quartier'].", ".$donnee['lieux_liv'];?></td>
 									</tr>
 									<tr>
 										<td>Date de livraison</td>
@@ -67,7 +67,7 @@
 									</tr>
 									<tr>
 										<td>Somme total</td>
-										<td><?=$donnee['prixTotal']?></td>
+			<td><?=$donnee['prixTotal']+500?></td>
 									</tr>
 									</table>
 							</div>
@@ -98,7 +98,7 @@
 							 ?>
 								<tr>
 									<td><img src="../public/image/<?=$donnee1['image_pro']?>" alt="" style="width:100px"></td>
-									<td><?=$donnee1['nom_pro']?><br><?=$idCli?></td>
+									<td><?=$donnee1['nom_pro']?></td>
 									<td><?=$qte=$pQte[$i]; ?> <?php 
 						if($donnee1['categorie']=="Pchair" || $donnee1['categorie']=="Ppondeuse"){
 							
@@ -122,7 +122,7 @@
 						</table>
 						
 				<table style="margin-top:20px; font-weight:bold" class="panier">
-					<tr><td> Frais de livraison (A partie de 5OOO fcfa la livraison est gratuit)</td><td><?php if($total>=5000){$frais=0;}else{$frais=400;} echo $frais; ?> fcfa</td></tr>
+					<tr><td> Frais de livraison (A partie de 5OOO fcfa la livraison est gratuit)</td><td><?php if($total==0){$frais=0;}else{$frais=500;} echo $frais; ?> fcfa</td></tr>
 				</table>
 				
 				<table style="margin-top:20px; font-weight:bold; border:5px solid black; font-size:30px" class="panier">

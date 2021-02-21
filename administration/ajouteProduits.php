@@ -23,9 +23,13 @@
 						<option value="mouton" >Mouton</option>
 						<option value="bouc">Bouc</option>
 						<option value="poisson" >Poisson</option>
+						<option value="poissonGues" >Poisson de Gues</option>
 						<option value="oeuf" >Oeuf</option>
+						<option value="cereale" >Céréale</option>
 						<option value="condiment">Condiment</option>
 						<option value="fruit" >Fruit</option>
+						<option value="nectar" >Nectar</option>
+						<option value="eau" >Eau</option>
 						<option value="tubercule" >tubercule</option>
 						<option value="riz" >Riz</option>
 						<option value="huile" >Huile</option>
@@ -70,6 +74,10 @@
 			<tr>
 				<td><label for="motCle">Mots clés</label></td>
 				<td><textarea type="text" id="motCle" name="motCle"></textarea></td>
+			</tr>
+			<tr>
+				<td><label for="alt">Alt du produit</label></td>
+				<td><textarea type="text" id="alt" name="alt"></textarea></td>
 			</tr>
 			<tr>
 				<td></td>

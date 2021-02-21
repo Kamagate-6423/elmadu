@@ -124,7 +124,7 @@
 				</table>
 				
 				<table style="margin-top:20px; font-weight:bold" class="panier">
-					<tr><td> Frais de livraison (A partir de 5 000 fcfa la livraison est gratuite)</td><td><?php if($panier->total()>=5000 || $panier->total()==0){$frais=0;}else{$frais=400;} echo $frais; ?> fcfa</td></tr>
+					<tr><td> Frais de livraison </td><td><?php if($panier->total()==0){$frais=0;}else{$frais=500;} echo $frais; ?> fcfa</td></tr>
 				</table>
 				
 				<table style="margin-top:20px; font-weight:bold; border:5px solid black; font-size:30px" class="panier">

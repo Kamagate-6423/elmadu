@@ -8,6 +8,8 @@
 	$pQte=implode(',',array_values($_SESSION['panier']));
 	$pKeys=implode(',',array_keys($_SESSION['panier']));
 	
+	$ville= verifierDonne($_POST['ville']);
+	$quartier= verifierDonne($_POST['quartier']);
 	$lieuxL= verifierDonne($_POST['lieuxL']);
 	$dateL= verifierDonne($_POST['dateL']);
 	$heureL= verifierDonne($_POST['heureL']);
@@ -16,11 +18,13 @@
 	$totalV=$panier->total();
 	$comptV=$panier->compt();
 	
-	$reqValider='INSERT INTO commandes(id_cli, lieux_liv, date_liv, heure_liv, keys_pro, qtes_pro, prix_total ,date_valid)
-				VALUES(:idCli, :lieux, :date, :heure, :pKeys, :pQte, :total, NOW())';
+	$reqValider='INSERT INTO commandes(id_cli, ville, quartier, lieux_liv, date_liv, heure_liv, keys_pro, qtes_pro, prix_total ,date_valid)
+				VALUES(:idCli, :ville, :quartier, :lieux, :date, :heure, :pKeys, :pQte, :total, NOW())';
 	
 	$reqVariable=array(
 		'idCli'=>$idCli,
+		'ville'=>$ville,
+		'quartier'=>$quartier,
 		'lieux'=>$lieuxL,
 		'date'=>$dateL,
 		'heure'=>$heureL,

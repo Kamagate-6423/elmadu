@@ -44,8 +44,8 @@ if(!empty($_SESSION['client']['nomAdministrateur'])){
 				</div>
 			</div>
 			   <header class="container-fluid">
-					<div class="hidden-xs col-sm-2 col-md-3 col-lg-2"><img src="../public/image/logo.jpg" class="img-responsive"> </div>
-					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-6"><h4>Poulet</h4><h1>KAMSA</h1></div>
+					<div class="hidden-xs col-sm-2 col-md-3 col-lg-2"><img src="../public/image/logo1.jpg" class="img-responsive"> </div>
+					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-6"><h1>Kamat'up</h1><h6>La Qualité, la Disponibilité notre Priorité</h6></div>
 					<div class="col-xs-12 col-sm-5 col-md-4 col-lg-4">
 						<div class="panel panel-default" style="height:100px">
 							<div class="panel-heading">ADMINISTRATEUR</div>

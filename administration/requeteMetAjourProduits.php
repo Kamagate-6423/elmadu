@@ -20,9 +20,10 @@ session_start();
 	$stock= verifierDonne($_POST['stock']);
 	$description = verifierDonne($_POST['description']);
 	$motCle= verifierDonne($_POST['motCle']);
+	$alt= verifierDonne($_POST['alt']);
 	
 	if($categorie=="carrousel"){
-		$nomImage=substr($nomImage,-3);
+		$nomImage=substr($nomImage,0,-4);
 	}
 	
 
@@ -37,6 +38,7 @@ session_start();
 					stock = :stock,
 					info_pro = :infoPro,
 					mot_cle = :motCle,
+					alt = :alt,
 					binaire = :binaire, 
 					date_modif = NOW()
 					WHERE id_pro = :idPro';
@@ -53,6 +55,7 @@ session_start();
 			'stock'=>$stock,
 			'infoPro'=>$description,
 			'motCle'=>$motCle,
+			'alt'=>$alt,
 			'binaire'=>$tmp);
 	
 $bdd=new BDD();
